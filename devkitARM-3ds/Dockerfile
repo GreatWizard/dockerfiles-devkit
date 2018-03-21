@@ -23,10 +23,6 @@ RUN wget https://github.com/dnasdw/3dstool/releases/download/v1.1.1/3dstool_linu
   tar xf 3dstool.tar.gz -C /usr/local/bin && \
   rm 3dstool.tar.gz
 
-RUN wget https://github.com/devkitPro/3dstools/releases/download/v1.1.2/3dstools-1.1.2-x86_64-linux.tar.bz2 -O 3dsxtool.tar.bz2 && \
-  tar xf 3dsxtool.tar.bz2 -C /usr/local/bin && \
-  rm 3dsxtool.tar.bz2
-
 RUN wget https://github.com/Steveice10/bannertool/releases/download/1.1.0/bannertool.zip -O bannertool.zip && \
   unzip bannertool.zip -d bannertool && \
   mv bannertool/linux-x86_64/bannertool /usr/local/bin && \
@@ -36,6 +32,8 @@ RUN wget https://github.com/profi200/Project_CTR/releases/download/0.15/makerom_
   unzip makerom_ctrtool.zip -d makerom_ctrtool && \
   mv makerom_ctrtool/Linux_x86_64/makerom /usr/local/bin && \
   mv makerom_ctrtool/Linux_x86_64/ctrtool /usr/local/bin && \
+  chmod +x /usr/local/bin/makerom && \
+  chmod +x /usr/local/bin/ctrtool && \
   rm -rf makerom_ctrtool makerom_ctrtool.zip
 
 WORKDIR /source

@@ -6,6 +6,9 @@ MAINTAINER Guillaume Gérard "guillaume.gerard88@gmail.com"
 ENV DEVKITPRO /opt/devkitPro
 ENV DEVKITPPC $DEVKITPRO/devkitPPC
 
+# It allows to run commands manually
+ENV PATH="${DEVKITPPC}/bin:${PATH}"
+
 RUN apt-get update && \
   apt-get install -y \
     bzip2 \
