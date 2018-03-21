@@ -14,9 +14,9 @@ RUN apt-get update && \
     wget && \
   rm -rf /var/lib/apt/lists/*
 
-ADD https://raw.githubusercontent.com/devkitPro/installer/master/perl/devkitARMupdate.pl devkitARMupdate.pl
-RUN perl devkitARMupdate.pl && \
-  rm /devkitARMupdate.pl /*.tar.bz2
+RUN wget https://raw.githubusercontent.com/devkitPro/installer/master/perl/devkitARMupdate.pl -O devkitARMupdate.pl && \
+  perl devkitARMupdate.pl && \
+  rm devkitARMupdate.pl *.tar.bz2
 
 RUN mkdir /source
 WORKDIR /source

@@ -14,9 +14,9 @@ RUN apt-get update && \
     wget && \
   rm -rf /var/lib/apt/lists/*
 
-ADD https://raw.githubusercontent.com/devkitPro/installer/master/perl/devkitPPCupdate.pl devkitPPCupdate.pl
-RUN perl devkitPPCupdate.pl && \
-  rm /devkitPPCupdate.pl /*.tar.bz2
+RUN wget https://raw.githubusercontent.com/devkitPro/installer/master/perl/devkitPPCupdate.pl -O devkitPPCupdate.pl && \
+  perl devkitPPCupdate.pl && \
+  rm devkitPPCupdate.pl *.tar.bz2
 
 RUN mkdir /source
 WORKDIR /source

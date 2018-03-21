@@ -15,9 +15,9 @@ RUN apt-get update && \
     wget && \
   rm -rf /var/lib/apt/lists/*
 
-ADD https://raw.githubusercontent.com/devkitPro/installer/master/perl/devkitA64update.pl devkitA64update.pl
-RUN perl devkitA64update.pl && \
-  rm /devkitA64update.pl /*.tar.bz2
+RUN wget https://raw.githubusercontent.com/devkitPro/installer/master/perl/devkitA64update.pl -O devkitA64update.pl && \
+  perl devkitA64update.pl && \
+  rm devkitA64update.pl *.tar.bz2
 
 RUN mkdir /source
 WORKDIR /source
