@@ -28,5 +28,11 @@ RUN wget https://github.com/Steveice10/bannertool/releases/download/1.1.0/banner
   mv bannertool/linux-x86_64/bannertool /usr/local/bin && \
   rm -rf bannertool bannertool.zip
 
+RUN wget https://github.com/profi200/Project_CTR/releases/download/0.15/makerom_015_ctrtool.zip -O makerom_ctrtool.zip && \
+  unzip makerom_ctrtool.zip -d makerom_ctrtool && \
+  mv makerom_ctrtool/Linux_x86_64/makerom /usr/local/bin && \
+  mv makerom_ctrtool/Linux_x86_64/ctrtool /usr/local/bin && \
+  rm -rf makerom_ctrtool makerom_ctrtool.zip
+
 WORKDIR /source
 CMD ["bash"]

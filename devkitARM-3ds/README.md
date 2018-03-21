@@ -11,6 +11,7 @@ It includes the following tools:
 
 * [3dstool](https://github.com/dnasdw/3dstool)
 * [bannertool](https://github.com/Steveice10/bannertool)
+* [makerom and ctrtool](https://github.com/profi200/Project_CTR)
 
 ## Usage
 
