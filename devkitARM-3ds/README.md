@@ -10,6 +10,7 @@ It includes the following libraries build from source:
 It includes the following tools:
 
 * [3dstool](https://github.com/dnasdw/3dstool)
+* [3dsxtool, 3dsxdump and smdhtool](https://github.com/devkitPro/3dstools)
 * [bannertool](https://github.com/Steveice10/bannertool)
 * [makerom and ctrtool](https://github.com/profi200/Project_CTR)
 
