@@ -7,6 +7,11 @@ It includes the following libraries build from source:
 * [ctrulib](https://github.com/smealum/ctrulib)
 * [citro3d](https://github.com/fincs/citro3d)
 
+It includes the following tools:
+
+* [3dstool](https://github.com/dnasdw/3dstool)
+* [bannertool](https://github.com/Steveice10/bannertool)
+
 ## Usage
 
 ```sh
