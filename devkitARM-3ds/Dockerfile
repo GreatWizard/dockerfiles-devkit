@@ -8,8 +8,9 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/devkitPro
-RUN git clone --depth=1 https://github.com/smealum/ctrulib.git && \
-  git clone --depth=1 https://github.com/fincs/citro3d.git
+RUN git clone https://github.com/smealum/ctrulib.git && \
+  git clone https://github.com/fincs/citro3d.git && \
+  git clone https://github.com/devkitPro/3ds_portlibs.git
 
 WORKDIR /opt/devkitPro/ctrulib/libctru
 RUN make && \
@@ -18,6 +19,11 @@ RUN make && \
 WORKDIR /opt/devkitPro/citro3d
 RUN make && \
   make install
+
+WORKDIR /opt/devkitPro/3ds_portlibs
+RUN make curl \
+  install \
+  clean
 
 RUN wget https://github.com/dnasdw/3dstool/releases/download/v1.1.1/3dstool_linux_x86_64.tar.gz -O 3dstool.tar.gz && \
   tar xf 3dstool.tar.gz -C /usr/local/bin && \

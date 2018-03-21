@@ -1,16 +1,16 @@
 # devkitARM-3ds
 
-Everything needed to build GBA, NDS, GP32 and 3DS homebrews.
+Everything needed to build 3DS homebrews.
 
 It includes the following libraries build from source:
 
 * [ctrulib](https://github.com/smealum/ctrulib)
 * [citro3d](https://github.com/fincs/citro3d)
+* [3ds_portlibs](https://github.com/fincs/citro3d): curl
 
 It includes the following tools:
 
 * [3dstool](https://github.com/dnasdw/3dstool)
-* [3dsxtool, 3dsxdump and smdhtool](https://github.com/devkitPro/3dstools)
 * [bannertool](https://github.com/Steveice10/bannertool)
 * [makerom and ctrtool](https://github.com/profi200/Project_CTR)
 
