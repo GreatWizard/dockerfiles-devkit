@@ -7,7 +7,7 @@ ENV DEVKITPRO /opt/devkitPro
 ENV DEVKITA64 $DEVKITPRO/devkitA64
 
 # It allows to run commands manually
-ENV PATH="${DEVKITA64}/bin:${PATH}"
+ENV PATH $DEVKITA64/bin:$PATH
 
 RUN apt-get update && \
   apt-get install -y \

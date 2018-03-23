@@ -7,7 +7,7 @@ ENV DEVKITPRO /opt/devkitPro
 ENV DEVKITARM $DEVKITPRO/devkitARM
 
 # It allows to run commands manually
-ENV PATH="${DEVKITARM}/bin:${PATH}"
+ENV PATH $DEVKITARM/bin:$PATH
 
 RUN apt-get update && \
   apt-get install -y \
