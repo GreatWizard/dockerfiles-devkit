@@ -7,7 +7,7 @@ ENV DEVKITPRO /opt/devkitPro
 ENV DEVKITPSP $DEVKITPRO/devkitPSP
 
 # It allows to run commands manually
-ENV PATH="${DEVKITPSP}/bin:${PATH}"
+ENV PATH $DEVKITPSP/bin:$PATH
 
 RUN apt-get update && \
   apt-get install -y \
